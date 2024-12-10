@@ -1,0 +1,183 @@
+@font-face {
+    font-family: "Parkisan";
+    src:
+      local("Parkisan"),
+      url("./Parkinsans/Parkinsans-VariableFont_wght.ttf");
+  }
+
+body {
+    font-family: Parkisan;
+    margin: 0;
+    padding: 0;
+    position:relative;
+}
+
+/*OVERLAY DIALOG*/
+.overlay {
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(7, 36, 46, 0.574);
+    position: fixed;
+    top:0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.d_none {
+    display: none;
+}
+
+.dialog {
+    height: 80dvh;
+    width: 50dvw;
+    background-color: rgb(10, 54, 69);
+    border-radius: 15px;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+}
+
+.picture_name {color:rgb(241 247 249); font-size: 36px;}
+
+.arrows {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#index_compute {color:rgb(241 247 249); font-size: 24px;}
+
+.dialog_button {
+    color: coral;
+    font-weight: bolder;
+    background-color: rgb(5 23 33);
+    border-radius: 8px;
+    border: none;
+    height: 40px;
+    width: 40px;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.dialog_button:hover {
+    cursor: pointer;
+}
+
+.upper_button {width: 100%; display: flex; justify-content: flex-end;}
+
+.picture_name {padding-bottom: 30px;}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery img {
+    height: 120px;
+    width: 120px;
+    border-radius: 12px;
+    object-fit: cover;
+    box-sizing:border-box;
+    border: 1px solid rgb(8, 42, 59);
+    margin: 8px;
+}
+
+.gallery img:hover {
+    position: fixed;
+    transform: scale(1.1);
+    transition-delay: 225ms;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+    position: relative;
+    cursor: pointer;
+}
+
+.img_on_dialog {
+    height: 500px;
+    width: 500px;
+    border-radius: 12px;
+    object-fit: cover;
+    box-sizing:border-box;
+    border: 3px solid rgb(8, 42, 59);
+}
+
+/*HEADER*/
+header {
+    display: flex;
+    justify-content: flex-start;
+    padding: 30px 160px;
+    background-color: rgb(7 36 46);
+}
+
+header img {height: 40px;}
+
+.main {
+    min-height: calc(100vh - 188px);
+    padding: 30px 160px;
+    background-color: rgb(5 23 33);
+    color: rgb(241 247 249);
+    box-sizing:border-box;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
+    z-index:1;
+}
+
+h1 {margin: 0; margin-bottom: 2rem ; font-size: 36px;}
+
+/*FOOTER*/
+footer {
+    color: rgb(241 247 249);
+    background-color: rgb(7 36 46);
+    text-align: center;
+    padding: 30px 160px;
+}
+
+
+/*MEDIA QUERY HINTERGRUND*/
+@media (max-width: 882px) {
+    header {padding: 30px 80px;}
+    .main {padding: 30px 80px;}
+    footer {padding: 30px 80px;}
+}
+
+@media (max-width: 615px) {
+    header {padding: 30px;}
+    .main {padding: 30px;}
+    footer {padding: 30px;}
+}
+
+@media (max-width: 500px) {
+    .gallery img {height:80px; width: 80px;}
+}
+
+/*MEDIA QUERY DIALOG*/
+@media (max-width: 1130px) {.picture_name {font-size: 24px;}}
+@media (max-width: 1190px) {.arrows {padding-top: 16px;}}
+@media (max-width: 1000px) {.img_on_dialog {height: 400px; width: 400px;}}
+@media (max-width: 770px) {
+    .dialog {height: 70dvh; padding: 16px 80px 30px 80px;}
+    .picture_name {padding-bottom: 16px;}
+    .dialog_button {width: 24px; height: 24px; font-size: 24px;}
+}
+@media (max-width: 620px) {.img_on_dialog {width: 320px; height: 320px;} .picture_name {font-size: 18px;}}
+@media (max-width: 415px) {.img_on_dialog {width: 280px; height: 280px;}}
+@media (max-width: 370px) {
+    .img_on_dialog {width:220px; height: 220px;} 
+    .dialog {padding: 16px 30px 30px 30px;}
+    .picture_name {font-size: 16px;}
+}
+@media (max-width: 340px) {.img_on_dialog {height: 200px; width: 200px;}}

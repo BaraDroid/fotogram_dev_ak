@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotogram</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+    <link rel="icon" type="image/png" href="./img/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./img/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="./img/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png" />
+    
+</head>
+
+<body onload="render()">
+    <div class="overlay d_none" id="overlay" onclick="removeOverlay(event)">
+        <div class="dialog" onclick="clickOnDialog ()">
+            <div class="upper_button">
+                <button class="dialog_button" id="close_button" onclick="removeOverlay(event)">X</button>
+            </div>
+            <div class="picture_name" id="pictureName">
+                
+            </div>
+            <div id="actual_picture" class="actual_picture">
+            </div>
+            <div class="arrows">
+                <button id="btn_left" class="dialog_button" onclick="moveLeft()"><</button>
+                <span id="index_compute"></span>
+                <button id="btn_right" class="dialog_button" onclick="moveRight()">></button>
+            </div>
+        </div>
+    </div>
+    <header>
+        <a href="index.html"><img src="./img/logos/logo_fotogram.svg" alt="fotogram logo"></a>
+    </header>
+
+    <section class="main">
+        <h1>Your personal foto album</h1>
+        <div id="picture_gallery" class="gallery">
+        </div>
+    </section>
+
+    <footer>© Barbora</footer>
+</body>
+</html>
